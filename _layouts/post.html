@@ -1,6 +1,10 @@
 ---
 layout: default
 ---
+<div class="megapicture">
+	<img src="{{page.imgurl}}">
+</div>
+<div class="wrapper">
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
@@ -9,10 +13,17 @@ layout: default
   </header>
 
   <div class="post-content" itemprop="articleBody">
-  	<img class="megapicture" src="{{page.imgurl}}">
-  	<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{{page.audioID}}&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
-  	<h1>{{page.artistName}} - {{page.composername}}</h1>
-    {{ content }}
+  	  <h1>{{page.artistName}}</h1>
+  	  {{ content }}
+
+  	  {% assign category = page.collection_name %}
+  	  {% for comp in site.[category] %}
+  		<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{{comp.audioID}}&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+  		<h1>{{comp.title}} - {{comp.composername}}</h1>
+    	{{ comp.content }}
+    {% endfor %}
+
+
   </div>
 
 </article>
