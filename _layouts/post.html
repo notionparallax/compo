@@ -13,7 +13,9 @@ layout: default
   </header>
 
   <div class="post-content" itemprop="articleBody">
-      <h1>{{page.artistName}}</h1>
+      <h1 class="image-heading"><span class="name">{{page.artist_name}}</span> - 
+          <span class="date" >{{page.artwork_date | date: "%b %-d, %Y" }}</span> - 
+          <span class="title" >{{page.artwork_name}}</span></h1></h1>
       {{ content }}
 
       {% assign category = page.collection_name %}
@@ -22,7 +24,7 @@ layout: default
         <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{{comp.audioID}}&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
         <h1><span class="title">{{comp.title}}</span> - 
             <span class="name" >{{comp.composer_name}}</span> - 
-            <span class="date" >{{comp.recording_date}}</span></h1>
+            <span class="date" >{{comp.recording_date | date: "%b %-d, %Y" }}</span></h1>
         {{ comp.content }}
       </section>
     {% endfor %}

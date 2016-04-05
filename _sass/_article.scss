@@ -9,7 +9,11 @@
   }
 }
 
-// article {
-//article styles go in here
-
-// }
+article {
+  .post-meta.author{display: none;}
+  .image-heading {
+    .name {color: red;}
+    .date {color: blue;}
+    .title {color: green;}
+  }
+}
