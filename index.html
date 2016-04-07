@@ -13,7 +13,11 @@ layout: default
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
         <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+            <span class="name"  >{{post.artist_name}}</span> - 
+            <span class="date"  >{{post.artwork_date | date: "%b %-d, %Y" }}</span> - 
+            <span class="title" >{{post.artwork_name}}</span>
+          </a>
         </h2>
       </li>
     {% endfor %}
