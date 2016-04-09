@@ -12,8 +12,8 @@ description: > # this means to ignore newlines until "baseurl:"
   This is a project to collect recordings of different interpretations of unusual musical scores. Instigated at the start of 2017 around the 'Roller Painting' works of the British artist John Latham as part of an AHRC funded D.Phil at Oxford University by the artist Charles Ogilvie. It was build in collaboration with Ben Doherty, architect of parallel futures and Toby Young, Composer 
 baseurl: "/compo" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: charlieogilvie
+github_username:  admiralstrand
 assetspath: /Assets/
 
 # Build settings
