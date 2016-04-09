@@ -6,12 +6,10 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
+title: Roller Painting
+email: Charles.Ogilvie@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  This is a project to collect recordings of different interpretations of unusual musical scores. Instigated at the start of 2017 around the 'Roller Painting' works of the British artist John Latham as part of an AHRC funded D.Phil at Oxford University by the artist Charles Ogilvie. It was build in collaboration with Ben Doherty, architect of parallel futures and Toby Young, Composer 
 baseurl: "/compo" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 twitter_username: jekyllrb
