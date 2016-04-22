@@ -2,7 +2,7 @@
 date:   2016-03-24 09:15:08 -0700
 
 title:  "Roller Painting"
-composer_name: LAura Bohn
+composer_name: Laura Bohn
 recording_date: 2016-03-05 #use ISO date yyyy-mm-dd
 audioID: 257860399
 ---
