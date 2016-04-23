@@ -14,11 +14,15 @@
 
   article {
     @include span-columns(6);
-    .post-meta.author{display: none;}
+
+    .post-meta.author {display: none;}
+    
     .image-heading {
+    
       .name {color: red;}
       .date {color: blue;}
       .title {color: green;}
+    
     }
   }
 
