@@ -1,19 +1,25 @@
-.megapicture {
+.painting-page {
+  @include outer-container;
+  //border: 1px dashed red;
 
-  text-align: center;
-  width: 100%;
+  .megapicture {
+    @include span-columns(6);
+    text-align: center;
 
-  img {
-    height: 80vh;
-    margin: auto;
+    img {
+      height: calc(100vh - (#{$spacing-unit} /*top*/ + #{$spacing-unit}) /*bottom*/);;
+      margin: auto;
+    }
   }
-}
 
-article {
-  .post-meta.author{display: none;}
-  .image-heading {
-    .name {color: red;}
-    .date {color: blue;}
-    .title {color: green;}
+  article {
+    @include span-columns(6);
+    .post-meta.author{display: none;}
+    .image-heading {
+      .name {color: red;}
+      .date {color: blue;}
+      .title {color: green;}
+    }
   }
+
 }
