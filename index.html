@@ -3,26 +3,32 @@ layout: default
 ---
 
 <div class="home">
-
   <ul class="post-list">
+    <li>
+      <h1>{{ site.title }}</h1>
+      {% capture intro_text %}{% include intro_text.md %}{% endcapture %}
+      {{ intro_text | markdownify }}
+    </li>
     {% for post in site.posts %}
-      <li>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-          <img class="minipicture" src="{{post.imgurl | prepend: site.assetspath | prepend: site.baseurl | prepend: site.url }}">
-        </a>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+    <li>
+      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+        <div class="post-title">
+          <h2>
             <span class="name"  >{{post.artist_name}}</span> - 
-            <span class="date"  >{{post.artwork_date | date: "%b %-d, %Y" }}</span> - 
+            <span class="date"  >{{post.artwork_date | date: "%Y" }}</span> - <!-- "%b %-d, %Y" --> 
             <span class="title" >{{post.artwork_name}}</span>
-          </a>
-        </h2>
-      </li>
+          </h2>
+          <!-- <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span> -->
+        </div>
+        <div class="img-container">
+          <img class="post-image" src="{{post.imgurl | prepend: site.assetspath | prepend: site.baseurl | prepend: site.url }}">
+        </div>
+      </a>
+    </li>
     {% endfor %}
+    <li>
+      {% include footer.html %}
+      <p class="rss-subscribe">subscribe <a href="{{ " /feed.xml " | prepend: site.baseurl }}">via RSS</a></p>
+    </li>
   </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
 </div>
